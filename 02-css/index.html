@@ -4,26 +4,72 @@
     <meta charset="UTF-8">
     <title>David's To Do List</title>
     <style>
-      body {background-color: rgb(176, 179, 230);}
+
+      <!-- HTML !-->
+      <button class="button-delete" role="button">Button delete</button>
+
+      /* CSS */
+      .button-delete {
+        background-color: rgba(51, 51, 51, 0.05);
+        border-radius: 8px;
+        border-width: 0;
+        color: #333333;
+        cursor: pointer;
+        display: inline-block;
+        font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        list-style: none;
+        margin: 0;
+        margin-left: 20px;
+        padding: 10px 12px;
+        text-align: center;
+        transition: all 200ms;
+        vertical-align: baseline;
+        white-space: nowrap;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+
+      .input-wrapper {
+        display: flex;
+        align-items: center;
+       }
+  
       h1 { border: 2px solid rgb(61, 66, 67);}
       h1   {color: blue;}
-      p    {color: red;}
+      label { border: 2px solid rgb(61, 66, 67);}
+
+      input:nth-child(even) { background-color:#951919 }
       
-      </style>
+    </style>
+
+    <style>
+      .input-wrapper {
+        display: flex;
+        align-items: center;
+      }
+      
+      .button-delete {
+        margin-left: 10px;
+      }
+    </style>
   </head>
   <body>
     <!-- Your code goes here -->
     <form>
       <h1>David's To Do List</h1>
       <section>
-        <ol>
-          <li><input type="checkbox" id="Item1" name="Item1" value="0">
-          <label for="Item1"> Car MOT due 28th Dec 202</label><button>Delete</button></li>
-          <li><input type="checkbox" id="Item2" name="Item1" value="0">
-          <label for="Item2"> Order Christmas Presents</label><button>Delete</button></li>
-        </ol>
+          <input type="checkbox" id="Item1" name="Item1" value="0">
+          <label for="Item1"> Car MOT due 28th Dec 202</label><button>Delete</button><br>
+          <br>
+          <input type="checkbox" id="Item2" name="Item1" value="0">
+          <label for="Item2"> Order Christmas Presents</label><button>Delete</button><br>
+          <br>
       </section>
-      
+      <br>
       <section>
         <input type="submit" value="New Entry">
       </section>
